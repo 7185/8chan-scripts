@@ -8,7 +8,7 @@
 
 var s = document.getElementsByTagName("link");
 for (var i = 0; i < s.length; i++) {
-  if ((s[i].getAttribute("rel") === "stylesheet" &&
-       s[i].getAttribute("href") !== "/stylesheets/style.css"))
+  if (s[i].getAttribute("href") !== "/stylesheets/style.css" &&
+      s[i].getAttribute("href") !== "/static/flags/flags.css")
     s[i].parentNode.removeChild(s[i]);
 }
