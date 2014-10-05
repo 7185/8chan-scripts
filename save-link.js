@@ -9,6 +9,7 @@ function addSaveLink(el) {
   $(el).append("&nbsp;");
   $('<a/>', {
     href: $(el).closest("div").find("a").not(".hide-image-link").attr("href"),
+    title: 'Save image',
     text: '💾',
     style: 'text-decoration:none',
     download: title
