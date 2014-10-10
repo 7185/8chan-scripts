@@ -22,12 +22,12 @@ function addSearchEngine(el) {
   }).appendTo(el);
 }
 
-$("p.fileinfo").find(".postfilename").each(function(k, v) {
+$("p.fileinfo").find(".unimportant").each(function(k, v) {
   addSearchEngine(v);
 });
 
 $(document).on('new_post', function(e, post) {
-  $(post).find(".postfilename").each(function(k, v) {
+  $(post).find(".unimportant").each(function(k, v) {
     addSearchEngine(v);
   });
 });
